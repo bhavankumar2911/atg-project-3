@@ -30,7 +30,9 @@ app.post("/password-reset-email", sendPasswordResetEmail);
 // reset password
 app.post("/reset-password", changePassword);
 
-app.listen(9000, () => console.log("Server running on port 9000..."));
+app.listen(process.env.PORT || 9000, () =>
+  console.log("Server running on port 9000...")
+);
 
 // checking db connection
 dbConnection
