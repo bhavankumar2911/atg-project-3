@@ -12,6 +12,12 @@ const changePassword = require("./changePassword");
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send(`
+    <h1>API</h1>
+  `);
+});
+
 // register user
 app.post("/register", registerUser);
 
