@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>User API</h1>
+    <h2>Use Postman or any other API clients to access the below mentioned API endpoints</h2>
+    <h3>1. Register a user</h3>
+    <p><b>URL: </b><a href="#">https://atg-project-3.herokuapp.com/register</a></p>
+    <p><b>Input data format: </b>{
+        "email":"example@gmail.com",
+        "username":"example",
+        "password1":"example",
+        "password2":"example"
+    }</p>
+    <p><b>Response: </b>{"message":"registration message"}</p>
+
+    <h3>2. Login a user</h3>
+    <p><b>URL: </b><a href="#">https://atg-project-3.herokuapp.com/login</a></p>
+    <p><b>Input data format: </b>{
+        "username":"example",
+        "password":"example"
+    }</p>
+    <p><b>Response: </b>{"message":"login message"}</p>
+
+    <h3>3. Forgot password</h3>
+
+    <h4>3.1. Send password reset email</h4>
+    <p><b>URL: </b><a href="#">https://atg-project-3.herokuapp.com/password-reset-email</a></p>
+    <p><b>Input data format: </b>{
+        "username":"example"
+    }</p>
+    <p><b>Response: </b>{"message":"email message"}</p>
+
+    <h4>3.2. Reseting the password</h4>
+    <p><b>URL: </b><a href="#">https://atg-project-3.herokuapp.com/reset-password</a></p>
+    <p><b>Input data format: </b>{
+        "passwordResetToken":"token that you received in your email inbox",
+        "password1":"example",
+        "password2":"example"
+    }</p>
+    <p><b>Response: </b>{"message":"reset password message"}</p>
+</body>
+</html>

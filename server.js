@@ -7,15 +7,16 @@ const sendPasswordResetEmail = require("./sendPasswordResetEmail");
 const dbConnection = require("./dbConnection");
 const cors = require("cors");
 const changePassword = require("./changePassword");
+const path = require("path");
 
 // middlewares
 app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send(`
-    <h1>API</h1>
-  `);
+  return res.sendFile(path.join(__dirname, "index.html"), (err) => {
+    if (err) return res.send("Cannot load file");
+  });
 });
 
 // register user
